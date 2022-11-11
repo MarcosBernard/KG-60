@@ -1,0 +1,94 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"18 newmain.c
+[; ;newmain.c: 18: void InitApp (void);
+[v _InitApp `(v ~T0 @X0 0 ef ]
+"270 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 270: extern volatile unsigned char GPIO __attribute__((address(0x006)));
+[v _GPIO `Vuc ~T0 @X0 0 e@6 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+"316 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 316: extern volatile __control unsigned char TRISGPIO __attribute__((address(0x006)));
+[v _TRISGPIO `VWuc ~T0 @X0 0 e@6 ]
+"9 newmain.c
+[p x WDTE  =  OFF        ]
+"10
+[p x CP  =  OFF          ]
+"11
+[p x MCLRE  =  OFF       ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"75
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 75: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"95
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 95: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"115
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 115: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"181
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 181: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"201
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 201: __asm("OSCCAL equ 05h");
+[; <" OSCCAL equ 05h ;# ">
+"272
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC10-12Fxxx_DFP/1.5.61/xc8\pic\include\proc\pic10f200.h: 272: __asm("GPIO equ 06h");
+[; <" GPIO equ 06h ;# ">
+[v $root$_main `(v ~T0 @X0 0 e ]
+"20 newmain.c
+[; ;newmain.c: 20: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"21
+[; ;newmain.c: 21:     InitApp();
+[e ( _InitApp ..  ]
+"22
+[; ;newmain.c: 22:     while(1){
+[e :U 19 ]
+{
+"23
+[; ;newmain.c: 23:         GPIO = 0X02;
+[e = _GPIO -> -> 2 `i `uc ]
+"24
+[; ;newmain.c: 24:         _delay((unsigned long)((300)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"25
+[; ;newmain.c: 25:         GPIO = 0X00;
+[e = _GPIO -> -> 0 `i `uc ]
+"26
+[; ;newmain.c: 26:         _delay((unsigned long)((300)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"27
+[; ;newmain.c: 27:     }
+}
+[e :U 18 ]
+[e $U 19  ]
+[e :U 20 ]
+"28
+[; ;newmain.c: 28: }
+[e :UE 17 ]
+}
+"30
+[; ;newmain.c: 30: void InitApp(void){
+[v _InitApp `(v ~T0 @X0 1 ef ]
+{
+[e :U _InitApp ]
+[f ]
+"31
+[; ;newmain.c: 31:     TRISGPIO = 0X00;
+[e = _TRISGPIO -> -> 0 `i `uc ]
+"32
+[; ;newmain.c: 32:     GPIO = 0X00;
+[e = _GPIO -> -> 0 `i `uc ]
+"33
+[; ;newmain.c: 33: }
+[e :UE 21 ]
+}
